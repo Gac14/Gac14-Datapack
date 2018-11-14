@@ -1,0 +1,20 @@
+{
+	"icon":{
+		"item":"minecraft:iron"
+	},
+	"title":{
+		"text":"Dungeoneer Legend"
+	},
+	"parent":"gac14:dungeon/root",
+	"description":{
+		"text":"Conquer A Mythical Dungeon"
+	},
+	"criteria":{
+		"check":{
+			"trigger":"gac14:dungeons/conquer",
+			"conditions":{
+				"kind":"mythical"
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"name":"Blinding Thorns",
+	"max_level":3,
+	"applicable_items":["#gac14:armor"],
+	"mutex_enchantments":["#gac14:thorns"],
+	"triggers":{
+		"apply_effect":{
+			"trigger":"user_attacked",
+			"conditions":[
+				{
+					"condition":"first_trigger"
+				},
+				{
+					"condition":"random_chance",
+					"chance":{
+						"base":0.15,
+						"modifier":0.15
+					}
+				}
+			]
+		}
+	},
+	"effects":[
+		{
+			"trigger":"apply_effect",
+			"effect":"apply_source_status",
+			"status":"minecraft:blindness"
+		}
+	]
+}

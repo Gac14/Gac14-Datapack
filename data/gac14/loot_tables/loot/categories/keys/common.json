@@ -1,0 +1,14 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/keys/generic/common",
+					"weight":1
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,31 @@
+{
+	"prefix":{
+		"text":"",
+		"extra":[
+			{
+				"text":"[",
+				"bold":true
+			},
+			{
+				"text":"%",
+				"obfuscated":true
+			},
+			{
+				"text":"Admin",
+				"bold":true,
+				"color":"dark_red"
+			},
+			{
+				"text":"%",
+				"obfuscated":true
+			},
+			{
+				"text":"]",
+				"bold":true
+			}
+		]
+	},
+	"suffix":{
+		"text":""
+	}
+}

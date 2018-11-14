@@ -1,0 +1,11 @@
+{
+	"entries":[
+		"minecraft:command_block",
+		"minecraft:chain_command_block",
+		"minecraft:repeating_command_block",
+		"minecraft:debug_stick",
+		"minecraft:structure_block",
+		"minecraft:structure_void",
+		"minecraft:barrier"
+	]
+}

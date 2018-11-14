@@ -1,0 +1,19 @@
+{
+	"pools":[
+		{
+			"rools":1,
+			"entries":[
+				{
+					"type":"loot_table",
+					"weight":2,
+					"name":"gac14:loot/categories/armor/generic/mythical"
+				},
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/armor/legendary"
+				}
+			]
+		}
+	]
+}

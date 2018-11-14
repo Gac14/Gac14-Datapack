@@ -1,0 +1,27 @@
+{
+	"icon":{
+		"item":"minecraft:iron"
+	},
+	"title":{
+		"text":"Loot Horder"
+	},
+	"parent":"gac14:dungeon/conquer_many2",
+	"description":{
+		"text":"Conquer at least 100 Dungeons, including 30 Combined Legendary and Mythical"
+	},
+	"criteria":{
+		"check":{
+			"trigger":"gac14:dungeons/conquer",
+			"conditions":{
+				"limit":100
+			}
+		},
+		"mythicCheck":{
+			"trigger":"gac14:dungeons/conquer",
+			"conditions":{
+				"kind":["mythical","legendary"],
+				"limit":30
+			}
+		}
+	}
+}

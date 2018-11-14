@@ -1,0 +1,18 @@
+{
+	"values":[
+		"minecraft:protection",
+		"minecraft:projectile_protection",
+		"minecraft:fire_protection",
+		"minecraft:blast_protection",
+		"minecraft:sharpness",
+		"minecraft:smite",
+		"minecraft:bane_of_arthropods",
+		"minecraft:efficiency",
+		"minecraft:silk_touch",
+		"minecraft:fortune",
+		"minecraft:flame",
+		"minecraft:lure",
+		"minecraft:luck_of_the_sea",
+		"minecraft:curse_of_binding"
+	]
+}

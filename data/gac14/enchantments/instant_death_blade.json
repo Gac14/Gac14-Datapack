@@ -1,0 +1,29 @@
+{
+	"name":"Assasinate",
+	"max_level":1,
+	"applicable_items":["#gac14:sword"],
+	"triggers":{
+		"do_effect":{
+			"trigger":"attack_entity",
+			"conditions":[
+				{
+					"condition":"random_chance",
+					"chance":0.00001525878
+				}
+			]
+		}
+	},
+	"effects":[
+		{
+			"trigger":"do_effect",
+			"effect":"damage_target",
+			"damage":100000000000,
+			"damage_source":{
+				"is_magic":false,
+				"death_message":"%s was struck by the death blade",
+				"is_unavoidable":true,
+				"is_absolute":true
+			}
+		}
+	]
+}

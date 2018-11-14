@@ -1,0 +1,14 @@
+{
+	"icon":{
+		"item":"minecraft:stick",
+		"nbt":"{Enchantments:[{id:\"minecraft:unbreaking\"]}"
+	},
+	"title":{
+		"text":"Spellcasting"
+	},
+	"parent":null,
+	"description":{
+		"text":"Magic and Stuff"
+	},
+	"criteria":{}
+}

@@ -1,0 +1,17 @@
+{
+	"module":{
+		"name":"enchantments",
+		"enable":true
+	},
+	"datapacks":{
+		"datapack-enchantments":true,
+		"enchantments-style":"main",
+		"enchantment-tags":true,
+		"loot-table-tweaks":true
+	},
+	"vanilla-tweaks":{
+		"enchanting-table-system":"vanilla",
+		"item-tooltip-patch":true,
+		"use-attach-capabilities":true
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/armor/helmet/common"
+				},
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/armor/chestplate/common"
+				},
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/armor/leggings/common"
+				},
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/armor/boots/common"
+				}
+			]
+		}
+	]
+}

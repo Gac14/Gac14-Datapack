@@ -1,0 +1,36 @@
+{
+	"name":"Poison Edge",
+	"max_level":2,
+	"applicable_items":["#gac14:sword"],
+	"mutex_enchantments":["#gac14:aspect"],
+	"triggers":{
+		"do_effect":{
+			"trigger":"entity_attacked",
+			"conditions":[
+				{
+					"condition":"negation",
+					"chained":{
+						"condition":"entity_type",
+						"type":["undead"]
+					}
+				},
+				{
+					"condition":"random_chance",
+					"chance":0.1
+				}
+			]
+		}
+	},
+	"effects":[
+		{
+			"trigger":"do_effect",
+			"effect":"add_target_status",
+			"status":"minecraft:poison",
+			"duration":300,
+			"amplifier":{
+				"base":0,
+				"modifier":1
+			}
+		}
+	]
+}

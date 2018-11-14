@@ -1,0 +1,15 @@
+{
+	"name":"Health Boost",
+	"max_level":4,
+	"applicable_items":["#gac14:helmet","#gac14:chestplate"],
+	"attributes":[
+		{
+			"attribute":"generic.maxHealth",
+			"operation":0,
+			"value":{
+				"base":5,
+				"modifier":2
+			}
+		}	
+	]
+}

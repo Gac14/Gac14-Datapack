@@ -1,0 +1,20 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"item",
+					"weight":1,
+					"name":"minecraft:nether_star",
+					"functions":[
+						{
+							"function":"set_name",
+							"name":"\u00a7kle\u00a7r\u00a75Mythical Crate Key\u00a7r\u00a7kle\u00a7r\u200b"
+						}
+					]
+				}
+			]
+		}
+	]
+}

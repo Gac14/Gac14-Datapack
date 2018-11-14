@@ -1,0 +1,6 @@
+{
+	"pack":{
+		"pack_format":1,
+		"description":"Main Gac14 Datapack, which packages many gac14 features into a 1.13(1.14) datapack. Requires all Gac14 Server Mods"
+	}
+}

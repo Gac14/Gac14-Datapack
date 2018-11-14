@@ -1,0 +1,17 @@
+{
+	"icon":{
+		"item":"minecraft:blaze_rod"
+	},
+	"title":{
+		"text":"Magic!"
+	},
+	"parent":"gac14:magic/root",
+	"description":{
+		"text":"Cast a Spell"
+	},
+	"criteria":{
+		"cast":{
+			"trigger":"gac14:magic/cast_spell"
+		}
+	}
+}

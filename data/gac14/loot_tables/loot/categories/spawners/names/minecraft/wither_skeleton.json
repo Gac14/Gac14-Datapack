@@ -1,0 +1,27 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"item",
+					"name":"minecraft:spawner",
+					"functions":[
+						{
+							"function":"set_nbt",
+							"nbt":"{TileEntityData:{Delay:-1,MinSpawnDelay:1,MaxSpawnDelay:1000,SpawnData:{id:\"minecraft:wither_skeleton\"}}}"
+						},
+						{
+							"function":"set_name",
+							"name":{
+								"text":"Wither Skeleton Spawner",
+								"color":"gold",
+								"bold":true
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

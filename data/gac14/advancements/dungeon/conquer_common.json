@@ -1,0 +1,20 @@
+{
+	"icon":{
+		"item":"minecraft:iron"
+	},
+	"title":{
+		"text":"Dungeoneer Novice"
+	},
+	"parent":"gac14:dungeon/root",
+	"description":{
+		"text":"Conquer A Common Dungeon"
+	},
+	"criteria":{
+		"check":{
+			"trigger":"gac14:dungeons/conquer",
+			"conditions":{
+				"kind":"common"
+			}
+		}
+	}
+}

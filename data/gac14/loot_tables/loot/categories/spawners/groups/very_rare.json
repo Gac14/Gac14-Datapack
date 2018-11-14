@@ -1,0 +1,19 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/spawners/names/minecraft/powered_creeper"
+				},
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/spawners/names/minecraft/iron_golem"
+				}
+			]
+		}
+	]
+}

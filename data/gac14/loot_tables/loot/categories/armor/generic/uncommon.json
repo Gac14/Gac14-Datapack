@@ -1,0 +1,29 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/armor/helmet/uncommon"
+				},
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/armor/chestplate/uncommon"
+				},
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/armor/leggings/uncommon"
+				},
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/armor/boots/uncommon"
+				}
+			]
+		}
+	]
+}

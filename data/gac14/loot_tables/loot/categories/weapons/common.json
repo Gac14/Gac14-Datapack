@@ -1,0 +1,19 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/weapons/swords/common"
+				},
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/weapons/bows/common"
+				}
+			]
+		}
+	]
+}

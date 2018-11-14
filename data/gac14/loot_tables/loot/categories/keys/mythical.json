@@ -1,0 +1,19 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/keys/generic/mythical",
+					"weight":2
+				},
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/keys/legendary",
+					"weight":1
+				}
+			]
+		}
+	]
+}

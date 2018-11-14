@@ -1,0 +1,20 @@
+{
+	"icon":{
+		"item":"minecraft:iron"
+	},
+	"title":{
+		"text":"Dungeon Horder"
+	},
+	"parent":"gac14:dungeon/conquer_many",
+	"description":{
+		"text":"Conquer 50 Dungeons"
+	},
+	"criteria":{
+		"check":{
+			"trigger":"gac14:dungeons/conquer",
+			"conditions":{
+				"limit":50
+			}
+		}
+	}
+}

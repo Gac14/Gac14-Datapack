@@ -1,0 +1,38 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"item",
+					"name":"minecraft:chest",
+					"weight":1,
+					"functions":[
+						{
+							"function":"set_nbt",
+							"nbt":"{Lock:\"\u00a7klx\u00a7r\u00a72Uncommon Crate Key\u00a7r\u00a7klx\u00a7r\u200b\",LootTable:\"gac14:crate/uncommon\"}"
+						},
+						{
+							"function":"set_name",
+							"name":{
+								"text":"lx",
+								"obfuscate":true,
+								"extra":[
+									{
+										"text":"Uncommon Crate",
+										"obfuscate":false,
+										"color":"dark_green"
+									},
+									{
+										"text":"lx",
+										"obfuscate":true
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

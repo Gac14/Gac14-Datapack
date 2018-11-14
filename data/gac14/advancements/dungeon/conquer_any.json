@@ -1,0 +1,17 @@
+{
+	"icon":{
+		"item":"minecraft:wither_skeleton_skull"
+	},
+	"title":{
+		"text":"Dungeoneer"
+	},
+	"parent":"gac14:dungeon/root",
+	"description":{
+		"text":"Conquer Any Dungeon"
+	},
+	"criteria":{
+		"check":{
+			"trigger":"gac14:dungeons/conquer"
+		}
+	}
+}

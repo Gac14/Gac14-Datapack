@@ -1,0 +1,23 @@
+{
+	"name":{"text":"Refresh"},
+	"description":{"text":"Restores the user by a small ammount"},
+	"cost":10,
+	"cooldown":15,
+	"warmup":10,
+	"burnout":8,
+	"range":0,
+	"triggers":[
+		{
+			"trigger":"on_activate",
+			"effects":[
+				{
+					"effect":"heal",
+					"selector":{
+						"select":"caster"
+					},
+					"ammount":4
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"loot_table",
+					"weight":64,
+					"name":"gac14:loot/categories/spawners/groups/common"
+				},
+				{
+					"type":"loot_table",
+					"weight":16,
+					"name":"gac14:loot/categories/spawners/groups/uncommon"
+				},
+				{
+					"type":"loot_table",
+					"weight":4,
+					"name":"gac14:loot/categories/spawners/groups/rare"
+				},
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/spawners/groups/very_rare"
+				}
+			]
+		}
+	]
+}

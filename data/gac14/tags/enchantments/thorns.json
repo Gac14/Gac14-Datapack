@@ -1,0 +1,10 @@
+{
+	"values":[
+		"minecraft:thorns",
+		"gac14:effectthorns/poison",
+		"gac14:effectthorns/weakness",
+		"gac14:effectthorns/hunger",
+		"gac14:effectthorns/wither",
+		"gac14:effectthorns/blindness"
+	]
+}

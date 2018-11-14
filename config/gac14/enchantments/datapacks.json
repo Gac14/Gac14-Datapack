@@ -1,0 +1,9 @@
+{
+	"enchantment-syntax":{
+		"format":"main",
+		"attribute-modifiers":true
+	},
+	"enabled-triggers":[
+		"*"
+	]
+}

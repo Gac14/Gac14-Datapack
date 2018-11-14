@@ -1,0 +1,20 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"item",
+					"weight":1,
+					"name":"minecraft:gold_nugget",
+					"functions":[
+						{
+							"function":"set_name",
+							"name":"\u00a7klx\u00a7r\u00a72Uncommon Crate Key\u00a7r\u00a7klx\u00a7r\u200b"
+						}
+					]
+				}
+			]
+		}
+	]
+}

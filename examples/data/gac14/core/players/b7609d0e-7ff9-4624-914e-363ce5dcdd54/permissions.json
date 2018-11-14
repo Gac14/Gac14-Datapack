@@ -1,0 +1,12 @@
+{
+	"groups":[
+		"gac14:sudo",
+		"gac14:admin",
+		"gac14:manager",
+		"gac14:player",
+		"gac14:aochat",
+		"gac14:unbannable"
+	],
+	"plist":[],
+	"revoked":[]
+}

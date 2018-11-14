@@ -1,0 +1,20 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"item",
+					"weight":1,
+					"name":"minecraft:golden_carrot",
+					"functions":[
+						{
+							"function":"set_name",
+							"name":"\u00a7klo\u00a7r\u00a76Rare Crate Key\u00a7r\u00a7klo\u00a7r\u200b"
+						}
+					]
+				}
+			]
+		}
+	]
+}

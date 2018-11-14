@@ -1,0 +1,32 @@
+{
+	"time":{
+		"base":300,
+		"add":140
+	},
+	"messages":{
+		"enter":{
+			"text":"You are now in combat. Logging out will result in immediate death",
+			"color":"dark_red"
+		},
+		"exit":{
+			"text":"You are no longer in combat, it is now safe to log out",
+			"color":"dark_red"
+		},
+		"kill":{
+			"selector":"@s",
+			"color":"red",
+			"extra":[
+				{
+					"text":" logged out while in combat.",
+					"color":"dark_red"
+				}
+			]
+		}
+	},
+	"penalty":{
+		"damage":3.00e+100,
+		"is_unavoidable":true,
+		"bypasses_magic":true,
+		"bypasses_armor":true
+	}
+}

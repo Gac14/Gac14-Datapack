@@ -1,0 +1,26 @@
+{
+	"name":"Healing",
+	"max_level":4,
+	"applicable_items":["#gac14:helmet"],
+	"triggers":{
+		"effect":{
+			"trigger":"tick",
+			"conditions":[
+				{
+					"condition":"delay",
+					"delay":25
+				}
+			]
+		}
+	},
+	"effects":[
+		{
+			"trigger":"effect",
+			"effect":"heal_user",
+			"ammount":{
+				"base":1.125,
+				"modifier":0.75
+			}
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"name":"Dash",
+	"max_level":3,
+	"applicable_items":["#gac14:leggings"],
+	"attributes":[
+		{
+			"attribute":"generic.movementSpeed",
+			"operation":2,
+			"value":{
+				"base":0.25,
+				"modifier":0.125
+			}
+		}
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"loot_table",
+					"weight":8,
+					"name":"gac14:loot/categories/spawners/names/minecraft/chicken"
+				},
+				{
+					"type":"loot_table",
+					"weight":8,
+					"name":"gac14:loot/categories/spawners/names/minecraft/pig"
+				},
+				{
+					"type":"loot_table",
+					"weight":4,
+					"name":"gac14:loot/categories/spawners/names/minecraft/cow"
+				},
+				{
+					"type":"loot_table",
+					"weight":1,
+					"name":"gac14:loot/categories/spawners/names/minecraft/zombie"
+				}
+			]
+		}
+	]
+}
