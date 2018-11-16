@@ -1,0 +1,18 @@
+{
+	"entries":[
+		{
+			"type":"category",
+			"category":"",
+			"name":"gac14:items/keys",
+			"display":{
+				"text":"Crate Keys",
+				"color":"gold",
+				"bold":true
+			},
+			"icon":{
+				"in-game":"minecraft:tripwire_hook",
+				"site":"images/icons/keys.jpg"
+			}
+		}
+	]
+}

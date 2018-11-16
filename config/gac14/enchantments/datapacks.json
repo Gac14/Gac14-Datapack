@@ -3,7 +3,5 @@
 		"format":"main",
 		"attribute-modifiers":true
 	},
-	"enabled-triggers":[
-		"*"
-	]
+	"disabled-triggers":[]
 }
