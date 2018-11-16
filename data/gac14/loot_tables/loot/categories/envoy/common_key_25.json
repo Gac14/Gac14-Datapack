@@ -1,0 +1,28 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"weight":1,
+					"type":"item",
+					"name":"minecraft:torch",
+					"functions":[
+						{
+							"function":"create_envoy",
+							"envoy_loot_table":"gac14:envoys/items/common_key_25"
+						},
+						{
+							"function":"set_name",
+							"name":{
+								"text":"Envoy [Common Crate Key * 25]",
+								"bold":true,
+								"color":"gold"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
