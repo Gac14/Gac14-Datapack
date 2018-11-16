@@ -1,0 +1,27 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"weight":1,
+					"type":"item",
+					"name":"minecraft:torch",
+					"functions":[
+						{
+							"function":"create_envoy",
+							"envoy_loot_table":"gac14:envoys/items/uncommon_key_1"
+						},
+						{
+							"function":"set_name",
+							"name":{"text":"Envoy [Uncommon Crate Key]",
+								"bold":true,
+								"color":"gray"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
