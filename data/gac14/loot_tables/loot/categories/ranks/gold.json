@@ -1,0 +1,23 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"item",
+					"name":"minecraft:paper",
+					"functions":[
+						{
+							"function":"set_name",
+							"name":[{"text":"[","bold":true},{"text":"Gold","color":"gold","bold":true},{"text":"]","bold":true}]
+						},
+						{
+							"function":"gac14:make_function_item",
+							"target":"gac14:buycraft/ranks/gold"
+						}
+					]
+				}
+			]
+		}
+	]
+}

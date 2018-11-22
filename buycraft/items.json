@@ -13,6 +13,11 @@
 				"in-game":"minecraft:tripwire_hook",
 				"site":"images/icons/keys.jpg"
 			}
+		},
+		{
+			"type":"category",
+			"category":"",
+			"name":"gac14:items/ranks"
 		}
 	]
 }
