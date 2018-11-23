@@ -9,14 +9,9 @@
 					"name":"minecraft:enchanted_book",
 					"functions":[
 						{
-							"function":"randomly_enchant",
+							"function":"enchant_randomly",
 							"enchantments":[
-								"gac14:aspect/decay_plus",
-								"gac14:thorns/decay",
-								"minecraft:vanishing_curse",
-								"gac14:supershield/magic",
-								"gac14:supershield/melee",
-								"gac14:wound"
+								"#gac14:rarity/mythical"
 							]
 						}
 					]

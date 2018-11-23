@@ -17,7 +17,20 @@
 		{
 			"type":"category",
 			"category":"",
-			"name":"gac14:items/ranks"
+			"name":"gac14:items/ranks",
+			"display":{
+				"text":"Ranks",
+				"color":"red",
+				"bold":true
+			},
+			"icon":{
+				"in-game":"minecraft:gold",
+				"site":"images/icons/ranks.jpg"
+			}
+		},
+		{
+			"type":"item",
+			"category":"gac14:items/keys"
 		}
 	]
 }
