@@ -1,0 +1,4 @@
+{
+	"execute-as-sudo":true,
+	"run-as-activator":true
+}

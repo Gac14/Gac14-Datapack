@@ -1,0 +1,17 @@
+{
+	"loot":{
+		"add-envoy-function":true,
+		"generate-uid-from-seed":false
+	},
+	"envoy-chest":{
+		"generate-loot-seed":true,
+		"use-uid":true
+	},
+	"event":{
+		"cap-time":4000,
+		"cap-limit":12000,
+		"koph-mode":"limitx",
+		"limitx-friend-behavior":"reinforce",
+		"limitx-enemy-behavior":"stall"
+	}
+}

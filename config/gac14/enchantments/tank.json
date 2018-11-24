@@ -1,6 +1,6 @@
 {
 	"enable-tank":true,
-	"effective-chain-min":3,
+	"min-chain":3,
 	"max-chain":10,
 	"max-level":4,
 	"modifier":{
