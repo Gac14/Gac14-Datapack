@@ -1,0 +1,24 @@
+{
+	"rarities":[
+		{
+			"name":"gac14:dungeons/rarities/common",
+			"weight":16
+		},
+		{
+			"name":"gac14:dungeons/rarities/uncommon",
+			"weight":8
+		},
+		{
+			"name":"gac14:dungeons/rarities/rare",
+			"weight":4
+		},
+		{
+			"name":"gac14:dungeons/rarities/legendary",
+			"weight":2
+		},
+		{
+			"name":"gac14:dungeons/rarities/mythical",
+			"weight":1
+		}
+	]
+}
