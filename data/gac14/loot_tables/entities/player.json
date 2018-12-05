@@ -1,0 +1,13 @@
+{
+	"pools":[
+		{
+			"rolls":1,
+			"entries":[
+				{
+					"type":"dynamic",
+					"name":"contents"
+				}
+			]
+		}
+	]
+}
