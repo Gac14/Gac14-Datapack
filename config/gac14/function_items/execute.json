@@ -1,4 +1,5 @@
 {
 	"execute-as-sudo":true,
-	"run-as-activator":true
+	"run-as-activator":true,
+	"ignore-permissions":true
 }

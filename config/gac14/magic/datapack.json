@@ -1,0 +1,22 @@
+{
+	"add-magic-extensions":true,
+	"spells":{
+		"add-spell-root":true,
+		"spell-format":0,
+		"allow-function-effect":false
+	},
+	"species":{
+		"add-species-root":true,
+		"species-format":0,
+		"allow-function-ability":false,
+		"attribute-modifiers":true
+	},
+	"classes":{
+		"add-classes-root":true,
+		"class-format":0,
+		"allow-function-ability":false
+	},
+	"advancements":{
+		"add-advancement-triggers":true
+	}
+}

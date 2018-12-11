@@ -5,7 +5,9 @@
 		"gac14:manager",
 		"gac14:player",
 		"gac14:aochat",
-		"gac14:unbannable"
+		"gac14:unbannable",
+		"gac14:media/youtube",
+		"gac14:media/twitch"
 	],
 	"plist":[],
 	"revoked":[]
