@@ -39,6 +39,41 @@ The proposal is modified as follows:
 * The item slot tags are similarly included in the gac14 namespace rather than the minecraft namespace. 
 * Enchantment Slots are not applicable on Gac14. Enchantments are allowed to provide a `enchanting_level_slot` as specified in the proposal, but they have no effect. 
 * `max_table_level` is similarly useless, but still entirely valid. 
+* The `none` trigger is not provided because the only custom enchantment that would use it (`gac14:tank`) is provided by alternative means. 
+* Sequence Order is not guaranteed with Vanilla Enchantments, but is guaranteed with custom enchantments, including `gac14:tank`.
+* As stated in the proposal, enchantment effects that run functions run as the sender as though the server used execute sudo as *user* *at* run function `<function>`. 
 
+
+
+## Function Tweaks Proposal ##
+
+A Future proposal that coaleces a couple of suggestions posted under commands at <feedback.minecraft.net> is implemented that tweaks functions. As well as enforces sequence order of certain situations. 
+
+The gamerules *commandChainMax* and *functionCommandLimit* are merged into *commandChainMax*, and the upper-limit is removed (aside from the hard limit of Integer.MAX_VALUE/32-bit signed integer limit). 
+
+If a command results in a function being run indirectly, it counts to the current command chain. This includes commands that trigger directly trigger advancements, enchantment effects, and loot table generation that specify running a function. 
+If a command results in a function being run indirectly, the sequence order is well defined between other commands in the same chain. Commands run in different command chains within the same tick are unsequenced relative to each other, and as a result the sequence order is undefined between the chains. 
+
+Note that commands that indirectly trigger an advancement, enchantment effect, or loot table generation result in functions that are run by those to be in a different command chain. However sequence order is well defined between these functions. The same applies for effects that in some way indirectly runs a function. 
+
+### Handling Infinite Loops ###
+
+An Infinite Loop is defined as a recursive execution of a function that nets no change in the game state. 
+
+Reguardless of the source, these infinite loops are considered to be `dead` loops. The behavior of executing such a loop is undefined. 
+
+Command chains are considered atomic operations. Observeble changes in game state caused by a command chain do not reflect other command chains, except chains that start execution after the first chain is completed, or when the chains have a well defined sequence order. 
+
+For example, if a score is set by one command chain and read by annother that is executed without guaranteed sequencing, it is unspecified if the state of the score is the one prior to the first chain started, or after the first chain completed, but will never be an intermidiate state. This is the case even if the second command chain starts after the first one is executing. 
+
+If sequencing is guaranteed, then the changes in game state caused by that command chain is given by the sequence guarantee. (Hense the fact that game state manipulations caused in one tick are guaranteed to be reflected in commands run the next tick). 
+
+A command run in a chain is guaranteed in-line sequencing with other commands in the chain. All commands that preceed it in the chain will complete before that command is run, and all commands that follow the chain will not be run until that command completes. 
+
+A separate chain run because of an indirect command source that results from an observeable effect of a command chain is sequenced after the command chain that caused it completes. 
+
+A command chain is sequenced in order with all other command chains that execute in previous ticks and all command chains that will execute in subsequent ticks. 
+
+Any command run by a client is sequenced after all command chains which have observable effects that are reflected in that client. Commands run by clients are indeterminately sequenced with respect to any command chains with observable effects that have not been reflected in the client (due to latency and other issues that can affect command timing). 
 
 
