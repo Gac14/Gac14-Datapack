@@ -1,0 +1,32 @@
+{
+	"pools":[
+		{
+			"entries":[
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/armor/legendary",
+					"weight":4
+				},
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/books/legendary",
+					"wieght":5
+				},
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/weapons/legendary",
+					"weight":4
+				},
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/crates/legendary",
+					"weight":6
+				}
+			],
+			"rolls":{
+				"min":6,
+				"max":16
+			}
+		}
+	]
+}

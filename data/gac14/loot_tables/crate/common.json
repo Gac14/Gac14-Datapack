@@ -1,0 +1,32 @@
+{
+	"pools":[
+		{
+			"entries":[
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/armor/common",
+					"weight":4
+				},
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/books/common",
+					"wieght":5
+				},
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/weapons/common",
+					"weight":4
+				},
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/crates/common",
+					"weight":6
+				}
+			],
+			"rolls":{
+				"min":6,
+				"max":16
+			}
+		}
+	]
+}

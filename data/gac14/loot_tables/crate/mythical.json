@@ -1,12 +1,40 @@
 {
 	"pools":[
 		{
-			"rolls":1,
+			"rolls":{
+				"min":6,
+				"max":16
+			},
 			"entries":[
 				{
 					"type":"loot_table",
-					"name":"gac14:loot/categories/keys/mythical",
+					"name":"gac14:loot/categories/keys/common",
 					"weight":1
+				},
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/armor/mythical",
+					"weight":4
+				},
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/books/mythical",
+					"wieght":5
+				},
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/weapons/mythical",
+					"weight":4
+				},
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/spawners/any",
+					"weight":2
+				},
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/categories/crates/mythical",
+					"weight":6
 				}
 			]
 		}
