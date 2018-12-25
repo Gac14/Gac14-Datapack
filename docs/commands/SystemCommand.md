@@ -3,9 +3,9 @@
 The system command is an internal command that provides a bridge from the high-level function interface of the Gac14 Datapack to the low-level interfaces of Gac14 Mods. 
 
 ## Disclaimer ##
-The command's documented here are for use within the Gac14 Datapack. They are for expert use only. 
-Many commands will make assumptions about the context they are run in, and the arguments they receive and will usually not validate these assumptions. 
-Additionally, these commands are subject to change without notice. As such, any person who uses the commands documented here does so AT THERE OWN RISK. No person who provided this documentation to your, or provided any mod that adds a subcommand, documented or not, to the system command, shall be held liable for any damage of any kind under any circumstances, direct or indirect, pertaining to your use and/or misuse of the system command. 
+The command's documented here are intended soley for use within the Gac14 Datapack. 
+Many commands will make assumptions about the context they are run in, and the arguments they receive and will usually not validate these assumptions (as such, if an assumption fails the result is usually undefined behavior). 
+Additionally, these commands are subject to change without notice. As such, any person who uses the commands documented here does so AT THERE OWN RISK. No person who provided this documentation to you, or provided any mod that adds a subcommand, documented or not, to the system command, shall be held liable under any circumstances for any damage of any kind, direct or indirect, pertaining to your use and/or misuse of the system command. 
 
 ## Syntax ##
 
@@ -13,7 +13,7 @@ Additionally, these commands are subject to change without notice. As such, any 
 /system <subcommand>
 ```
 
-Executes an internal command from an implementation defined set of subcommands. The command is allowed to make any assumptions about it use that it wants, and is not required to validate those assumptions. If any command is run and the assumption does not hold, the behavior is undefined. 
+Executes an internal command from an implementation defined set of subcommands. The command is allowed to make any assumptions about it's use that it wants, and is not required to validate those assumptions. If any command is run and the assumptions it makes do not hold, the behavior is undefined. 
 
 Asside from one subcommand (`/system doPrivileged <function>`), the command must be run in an elevated context or the command fails. It is unspecified if this function will appear in the help command. 
 
@@ -82,5 +82,29 @@ All values can be printed in chat, possibly with a tooltip that appears when it 
 * If the value is a number, it is printed as the value of the number. 
 
 
+### player ###
 
+```
+/system player <player> limits <key> set|add|subtract <value> (1)
+/system player <player> actions <key> enable|disable (1)
+/system player <player> reset (2)
+```
+
+(1): Sets a limit for a player, or enables/disables certain actions take by a player.
+
+The keys that are defined are unspecified. If a key is referenced that does not exist, the result is indeterminate. If a key is referenced improperly (an action key used in the limits subcommand), the behavior is undefined. 
+
+Each limit key has an unspecified initial value, and may have an unspecified maximum and minimum. Each action key has an unspecified initial state. 
+
+If an action affected by this command is concurrently taken by `<player>`, the behavior is undefined unless the action has guaranteed sequence order with this command. 
+
+Use of the `enable` verb of the actions subcommand synchronizes with any use of the `disable` verb for the same key on `player` and vice versa. Additionally, use of the actions subcommand for a given `<key>` synchronizes with the player action associated with `<key>` taken by `<player>` (this results in indeterminate sequence order even if the associated effects are unsequenced). 
+
+
+(2): Clears a player's inventory, ender-chest, personal inventories, removes the player from all groups, removes all permissions, the associated spawn point etc., and executes any other unspecified actions. The player is then killed if online ignoring all death triggers and player loot tables. If the player is offline, this is equivalent to deleting the player.dat file and associated player information folder. If this function is run as `<player>` the behavior is undefined. 
+
+
+### Additional Subcommands ###
+
+Mods may add additional, implementation-defined subcommands to the system command. 
 
