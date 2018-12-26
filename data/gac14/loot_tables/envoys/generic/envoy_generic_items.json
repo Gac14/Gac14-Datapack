@@ -38,7 +38,12 @@
 				},
 				{
 					"type":"loot_table",
-					"name":"gac14:loot/category/cmditems/extrapv",
+					"name":"gac14:loot/category/buy/extrapv",
+					"weight":4
+				},
+				{
+					"type":"loot_table",
+					"name":"gac14:loot/category/buy/extrahome",
 					"weight":4
 				}
 			]
