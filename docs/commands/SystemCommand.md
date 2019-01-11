@@ -92,16 +92,22 @@ All values can be printed in chat, possibly with a tooltip that appears when it 
 
 (1): Sets a limit for a player, or enables/disables certain actions take by a player.
 
-The keys that are defined are unspecified. If a key is referenced that does not exist, the result is indeterminate. If a key is referenced improperly (an action key used in the limits subcommand), the behavior is undefined. 
+The keys that are defined are unspecified. If a key that does not exist is referenced or is referenced improperly (an action key used in the limits subcommand or vice versa), the behavior is undefined. 
 
-Each limit key has an unspecified initial value, and may have an unspecified maximum and minimum. Each action key has an unspecified initial state. 
+Each limit key has an unspecified initial value, and may have an unspecified maximum and minimum. 
+If a limit key would be set to a value above its maximum (if such exists), the key is set to the maximum value instead. 
+If a limit key would be set to a value below its minimum (if such exists), the key is set to the minimum value instead. 
+Each action key has an unspecified initial state. 
 
 If an action affected by this command is concurrently taken by `<player>`, the behavior is undefined unless the action has guaranteed sequence order with this command. 
 
-Use of the `enable` verb of the actions subcommand synchronizes with any use of the `disable` verb for the same key on `player` and vice versa. Additionally, use of the actions subcommand for a given `<key>` synchronizes with the player action associated with `<key>` taken by `<player>` (this results in indeterminate sequence order even if the associated effects are unsequenced). 
+Use of the `enable` verb of the actions subcommand synchronizes with any use of the `disable` verb for the same key on `player` and vice versa. Additionally, use of the actions subcommand for a given `<key>` synchronizes with the player action associated with `<key>` taken by `<player>` (this results in indeterminate sequence order even if the associated effects are unsequenced, with an unspecified sequencing guarantee, this allows for you to modify with limits command without fear of invoking undefined behavior). 
 
 
-(2): Clears a player's inventory, ender-chest, personal inventories, removes the player from all groups, removes all permissions, the associated spawn point etc., and executes any other unspecified actions. The player is then killed if online ignoring all death triggers and player loot tables. If the player is offline, this is equivalent to deleting the player.dat file and associated player information folder. If this function is run as `<player>` the behavior is undefined. 
+(2): Clears a player's inventory, ender-chest, player vaults (if they exist), removes the player from all groups, removes all permissions, deletes the associated spawn point etc., and executes any other unspecified actions. The player is then killed if online ignoring all death triggers and player loot tables.
+If the player is offline, this is equivalent to deleting the player.dat file and associated player information folder. 
+
+If this function is run as `<player>` the behavior is undefined. 
 
 
 ### Additional Subcommands ###
