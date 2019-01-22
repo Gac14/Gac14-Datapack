@@ -1,13 +1,13 @@
-# Advancement Triggers #
+# Advancement Triggers [pack.ext.advance] #
 Minecraft 1.12 added advancements, which are basically event handlers. They replaced the achievement system, and were fully extensible. 
 
 Several triggers are available in vanilla, and Gac14 adds some more to interact with mod components. All Custom triggers are in the gac14 namespace. 
 
-## Magic ##
+## Magic [pack.ext.advance.magic] ##
 
 Added By: Gac14 Magic
 
-### Cast Spell ###
+### Cast Spell [pack.ext.advance.magic.cast] ###
 
 `gac14:magic/cast_spell`
 
@@ -78,7 +78,7 @@ Available Conditions:
         * min (number): The minimum delta ratio
         * max (number): The maximum delta ratio
     
-### Activate Spell ###
+### Activate Spell [pack.ext.advance.magic.active] ###
 
 `gac14:magic/spell_activates`
 
@@ -93,7 +93,18 @@ Triggers when a spell's `on_activate` trigger applies.
        * (an entity) (object): An affected entity (tags common to all entities)
     
     
-## Dungeons ##
+## Dungeons [pack.ext.advance.dungeon] ##
+
+### Conquer Dungeon [pack.ext.advance.dungeon.defeat] ###
+
+Checked when a player leaves the dungeon Bounding Box after the boss is spawned, as long as the player was within a 20-block radius sphere from the boss when it was initially spawned, and also within the dungeon's bounding box, and at least 2 of the following is true:
+
+* The player spawned the dungeon boss
+* The player dealt damage to the dungeon boss
+* The player was dealt damage by the dungeon boss
+* The player opened at least 1 dungeon chest since the dungeon boss was spawned
+* The player is a friend of a player for which this trigger is checked, for that particular dungeon.
+ 
 
 
     

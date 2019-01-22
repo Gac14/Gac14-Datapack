@@ -1,4 +1,4 @@
-# System Command #
+# System Command [cmd.sys] #
 
 The system command is an internal command that provides a bridge from the high-level function interface of the Gac14 Datapack to the low-level interfaces of Gac14 Mods. 
 
@@ -7,7 +7,7 @@ The command's documented here are intended soley for use within the Gac14 Datapa
 Many commands will make assumptions about the context they are run in, and the arguments they receive and will usually not validate these assumptions (as such, if an assumption fails the result is usually undefined behavior). 
 Additionally, these commands are subject to change without notice. As such, any person who uses the commands documented here does so AT THERE OWN RISK. No person who provided this documentation to you, or provided any mod that adds a subcommand, documented or not, to the system command, shall be held liable under any circumstances for any damage of any kind, direct or indirect, pertaining to your use and/or misuse of the system command. 
 
-## Syntax ##
+## Syntax [cmd.sys.syntax] ##
 
 ```
 /system <subcommand>
@@ -19,7 +19,7 @@ Asside from one subcommand (`/system doPrivileged <function>`), the command must
 
 ## Subcommands ##
 
-### doPrivileged ##
+### doPrivileged [cmd.sys.privileged] ##
 
 ```
 /system doPrivileged <function>
@@ -33,10 +33,11 @@ Runs `<function>` in an elevated context. This function can be executed by any u
 
 All functions that are run by gac14 as a user are run as though by `/system doPrivileged <function>` and that `<function>` is tagged with `#gac14:doPrivileged`. This does not actually cause `<function>` to become tagged, and if it is not already tagged as such, external attempts to run via `/system doPrivileged` will fail. This is simply an exposition statement that defines that `<function>` is run in an elevated context. 
 
-### stack ###
+### stack [cmd.sys.stack] ###
 
 Manipulates the function stack. 
-This command may only be run from within a function or the behavior is undefined. In addition, if a frame is pushed by a function, that frame must be popped before that function completes.
+This command may only be run from within a function or the behavior is undefined. In addition, if a frame is pushed by a function, that frame must be popped before that function completes. 
+Note that it does not need to be popped from within the function (it can be popped from a separate function, provided that that function executes before the completion of the function). 
 
 ```
 /system stack push ... //(1)
@@ -56,7 +57,7 @@ This command may only be run from within a function or the behavior is undefined
 6. Sets the value of the nth value on the stack. 
 7. Executes a command that is sensitive to stack values.
 
-#### Types of Values on the Stack ####
+#### Types of Values on the Stack [cmd.sys.stack.types] ####
 
 Each value on the stack may be one of the following:
 
@@ -65,14 +66,15 @@ Each value on the stack may be one of the following:
 * A block specification, in the form `<block id>[states][tag]`
 * An entity reference, which is analougus to a target selector.
 * A block reference, which refers to a block at a position.
-* An item reference, which refers to an item in a block
+* An item reference, which refers to an item in a block/entity
 * A json text component, interpreted as though by `/tellraw`
 * A number value
 * A String value
 
+
 All values can be printed in chat, possibly with a tooltip that appears when it hovered over (it is implementation defined for each type if the tooltip is shown and what gets shown):
 
-* If the value is an item specification, block specification, or entity specification, prints the form representation of the block. It is implementation defined if any optional components are printed if that optional component is empty or the default.
+* If the value is an item specification, block specification, or entity specification, prints the representation of that specification. It is implementation defined if any optional components are printed if that optional component is empty or the default.
 * If the value is an entity reference, that refers to a player, prints the name of the the player.
 * If the value is an entity reference that refers to any other entity, prints the uuid of the entity selected by the reference, followed by (in parentheses) the specification of the entity. 
 * If the value is a block reference, prints the position of the block, followed by the block specification. 
@@ -81,8 +83,49 @@ All values can be printed in chat, possibly with a tooltip that appears when it 
 * If the value is a string, it is printed as though interpreted literally as the text of a json text component with no style or extra
 * If the value is a number, it is printed as the value of the number. 
 
+##### Reference Values [cmd.sys.stack.types.ref] #####
 
-### player ###
+Reference values 
+
+#### stack push [cmd.sys.stack.push] ####
+
+```
+/system stack push blockref <pos> //(1)
+/system stack push entityref <selector> //(2)
+/system stack push itemref entity <selector> <slot> //(3)
+/system stack push itemref entity get <n> <slot> //(4)
+/system stack push itemref block <pos> <slot> //(5)
+/system stack push itemref block get <n> <slot> //(6)
+/system stack push block <block> //(7)
+/system stack push block get <n> //(8)
+/system stack push entity <entity> [nbt] //(9)
+/system stack push entity get <n> //(10)
+/system stack push item <item> //(11)
+/system stack push item get <n> //(12)
+/system stack push text <text> //(13)
+/system stack push 
+```
+
+#### stack get [cmd.sys.stack.get] ####
+
+```cpp
+/system stack get <n>
+```
+
+Gets the value at the nth position on the stack. 
+If n is positive, returns the nth value pushed onto the stack in the current frame (indexed from 0). 
+If n is negative, returns the nth last value pushed onto the stack in the previous frame. 
+
+If for some reason, the value on the stack cannot be accessed, then the behavior is undefined (ie., there is less than n values pushed onto the stack in the current frame, or there is not a previous frame for negative accessing). 
+
+In any given subcommand of `/system stack`, if `get <n>` is a valid argument, it shall act as defined above, and use the value received as specified in the subcommand. 
+
+When `/system stack get <n>` is used on its own, it displays the value returned as its result message. 
+
+The result of the command depends on 
+
+
+### player [cmd.sys.player] ###
 
 ```
 /system player <player> limits <key> set|add|subtract <value> (1)
@@ -110,7 +153,7 @@ If the player is offline, this is equivalent to deleting the player.dat file and
 If this function is run as `<player>` the behavior is undefined. 
 
 
-### Additional Subcommands ###
+### Additional Subcommands [cmd.sys.additional] ###
 
 Mods may add additional, implementation-defined subcommands to the system command. 
 

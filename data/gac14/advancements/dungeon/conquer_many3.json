@@ -19,7 +19,7 @@
 		"mythicCheck":{
 			"trigger":"gac14:dungeons/conquer",
 			"conditions":{
-				"kind":["mythical","legendary"],
+				"kind":["gac14:rarities/mythic","gac14:rarities/legendary"],
 				"limit":30
 			}
 		}
