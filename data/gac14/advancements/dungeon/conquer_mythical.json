@@ -12,9 +12,7 @@
 	"criteria":{
 		"check":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"mythical"
-			}
+			"kind":"gac14:rarities/mythical"
 		}
 	}
 }

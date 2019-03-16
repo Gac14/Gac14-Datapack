@@ -1,5 +1,5 @@
 {
-	"name":"Poison Edge",
+	"name":"Demon Aspect",
 	"max_level":2,
 	"applicable_items":["#gac14:sword"],
 	"mutex_enchantments":["#gac14:aspect"],

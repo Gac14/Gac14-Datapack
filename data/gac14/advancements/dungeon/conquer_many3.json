@@ -12,16 +12,12 @@
 	"criteria":{
 		"check":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"limit":100
-			}
+			"limit":100
 		},
 		"mythicCheck":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":["gac14:rarities/mythic","gac14:rarities/legendary"],
-				"limit":30
-			}
+			"kind":["gac14:rarities/mythic","gac14:rarities/legendary"],
+			"limit":30
 		}
 	}
 }

@@ -12,108 +12,78 @@
 	"criteria":{
 		"commonSky":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"common",
-				"location":"sky"
-			}
+			"kind":"gac14:rarities/common",
+			"location":"gac14:locations/sky"
 		},
 		"commonSurface":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"common",
-				"location":"surface"
-			}
+			"kind":"gac14:rarities/common",
+			"location":"gac14:locations/surface"
 		},
 		"commonUnderground":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"common",
-				"location":"underground"
-			}
+			"kind":"gac14:rarities/common",
+			"location":"gac14:locations/underground"
 		},
 		"uncommonSky":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"uncommon",
-				"location":"sky"
-			}
+			"kind":"gac14:rarities/uncommon",
+			"location":"gac14:locations/sky"
 		},
 		"uncommonSurface":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"uncommon",
-				"location":"surface"
-			}
+			"kind":"gac14:rarities/uncommon",
+			"location":"gac14:locations/surface"
 		},
 		"uncommonUnderground":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"uncommon",
-				"location":"underground"
-			}
+			"kind":"gac14:rarities/uncommon",
+			"location":"gac14:locations/underground"
 		},
 		"rareSky":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"rare",
-				"location":"sky"
-			}
+			"kind":"gac14:rarities/rare",
+			"location":"gac14:locations/sky"
 		},
 		"rareSurface":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"rare",
-				"location":"surface"
-			}
+			"kind":"gac14:rarities/rare",
+			"location":"gac14:locations/surface"
 		},
 		"rareUnderground":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"rare",
-				"location":"underground"
-			}
+			"kind":"gac14:rarities/rare",
+			"location":"gac14:locations/underground"
 		},
 		"legendarySky":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"legendary",
-				"location":"sky"
-			}
+			"kind":"gac14:rarities/legendary",
+			"location":"gac14:locations/sky"
 		},
 		"legendarySurface":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"legendary",
-				"location":"surface"
-			}
+			"kind":"gac14:rarities/legendary",
+			"location":"gac14:locations/surface"
 		},
 		"legendaryUnderground":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"legendary",
-				"location":"underground"
-			}
+			"kind":"gac14:rarities/legendary",
+			"location":"gac14:locations/underground"
 		},
 		"mythicSky":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"mythical",
-				"location":"sky"
-			}
+			"kind":"gac14:rarities/mythical",
+			"location":"gac14:locations/sky"
 		},
 		"mythicSurface":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"mythical",
-				"location":"surface"
-			}
+			"kind":"gac14:rarities/mythical",
+			"location":"gac14:locations/surface"
 		},
 		"mythicUnderground":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"kind":"mythical",
-				"location":"underground"
-			}
+			"kind":"gac14:rarities/mythical",
+			"location":"gac14:locations/underground"
 		}
 	}
 }

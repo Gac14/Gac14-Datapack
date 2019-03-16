@@ -12,9 +12,7 @@
 	"criteria":{
 		"check":{
 			"trigger":"gac14:dungeons/conquer",
-			"conditions":{
-				"limit":50
-			}
+			"limit":50
 		}
 	}
 }
