@@ -11,7 +11,7 @@
 					"condition":"negation",
 					"chained":{
 						"condition":"entity_type",
-						"type":["undead"]
+						"type":["gac14:undead"]
 					}
 				},
 				{
