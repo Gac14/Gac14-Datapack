@@ -3,8 +3,5 @@
 	"ref":"HEAD",
 	"branch":"main",
 	"name":"gac14-datapack",
-	"clone-rules":{
-		"clone-to":"/",
-		"allow-overwrite-to":"/config/**;/datapacks/gac14-datapack/**;/buycraft/**"
-	}
+	"git-base-directory":"/"
 }
