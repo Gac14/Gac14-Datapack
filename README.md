@@ -14,6 +14,6 @@ This repository is released under the Terms of the MIT Free Software License. Se
 
 Additionally, complete and correct implementations of the Gac14 Server are granted to the following additional License:
 
-Permission is hereby implicitly granted to any person or persons who creates, maintains, and/or modifies a complete and correct implementation of the Gac14 Server, to use any patent why covers in part or in whole the functionality of the Gac14 Server, which exists presently or will exist, for as long as that patent exists and is held by either Connor Horman or the Gac14 Team, solely for use in that or other complete and correct implementations.
+Permission is hereby implicitly granted to any person or persons who creates, maintains, and/or modifies a complete and correct implementation of the Gac14 Server, to use, without restriction, any patent which covers in part or in whole the functionality of the Gac14 Server, which exists presently or will exist, for as long as that patent exists and is held by either Connor Horman or the Gac14 Team, solely for use in that or other complete and correct implementations.
 
 
