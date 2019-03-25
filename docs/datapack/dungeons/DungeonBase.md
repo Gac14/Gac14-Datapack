@@ -8,7 +8,7 @@ Dungeons provided custom functionality to Data Structure Blocks. This allows cer
 
 ### DungeonBoss [pack.dungeon.structext.boss] ###
 
-When a `DungeonBoss` data structure block is encountered during dungeon generation, a marker for the dungeon boss is placed in that location, then the structure block is removed.   
+When a `DungeonBoss` data structure block is encountered during dungeon generation, a marker for the dungeon boss is placed in that location, then the structure block is removed. 
 
 ### DungeonChest [pack.dungeon.structext.chest] ###
 
