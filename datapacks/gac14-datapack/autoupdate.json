@@ -1,7 +1,7 @@
 {
 	"repository":"https://github.com/chorman0773/Gac14-Datapack.git",
 	"ref":"HEAD",
-	"branch":"main",
+	"branch":"master",
 	"name":"gac14-datapack",
 	"git-base-directory":"/"
 }
