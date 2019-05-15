@@ -10,6 +10,8 @@ It will only function correctly on a minecraft version modified with those mods 
 This Repository has "plug-and-play" functionality. It can be downloaded or cloned to any Minecraft Save or Server Directory which is run with a version of minecraft modified as above. 
 If utilized in a Minecraft Version Prior to 1.13, additional features which are not documented will have to be implemented by any modifications for this datapack to work. 
 
+This datapack supports automatic updates. If cloned to the server directory of any supporting server, updates to the repository will be reflected in-game within an implementation-defined period of time.
+
 This repository is released under the Terms of the MIT Free Software License. See the corresponding `LICENSE` file for details. 
 
 Additionally, complete and correct implementations of the Gac14 Server are granted to the following additional License:
