@@ -10,7 +10,7 @@
 	"event":{
 		"cap-time":4000,
 		"cap-limit":12000,
-		"koph-mode":"limitx",
+		"koth-mode":"limitx",
 		"limitx-friend-behavior":"reinforce",
 		"limitx-enemy-behavior":"stall"
 	}
