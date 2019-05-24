@@ -1,8 +1,0 @@
-{
-  "type":"limitx",
-  "limitx-config":{
-    "provider-bias":"gac14:factions/koth/limitx",
-    "friend-behavior":"reinforce",
-    "enemy-behavior":"stall"
-  }
-}
