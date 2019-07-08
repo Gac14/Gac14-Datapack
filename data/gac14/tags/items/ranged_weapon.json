@@ -1,5 +1,6 @@
 {
-	"values":[
-		"minecraft:bow"
+	"entries":[
+		"#gac14:projectile_weapon",
+		"minecraft:trident"
 	]
 }
