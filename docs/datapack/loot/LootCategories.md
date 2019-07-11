@@ -7,19 +7,15 @@ This document lists all the loot categories that are defined by Gac14 and there 
 ### Crate and Key Categories ###
 
 ```
-gac14:loot/categories/crates/common
-gac14:loot/categories/crates/uncommon
-gac14:loot/categories/crates/rare
-gac14:loot/categories/crates/legendary
-gac14:loot/categories/crates/mythical
-gac14:loot/categories/keys/common
-gac14:loot/categories/keys/uncommon
-gac14:loot/categories/keys/rare
-gac14:loot/categories/keys/legendary
-gac14:loot/categories/keys/mythical
+gac14:loot/categories/keys/<type>
+gac14:loot/categories/crates/<key>
 ```
 
 Generates the crate items/crate keys for various loot tables. 
+The loot table associated with the crate item is `gac14:crate/<type>`. 
+
+The types available and there contents are a customization point. 
+
 The crate items are chests with a custom name, lock, and loot table set according to the target. The crate keys are items with the name corresponding to the appropriate lock. Note that these do not generate the items contained within the loot tables (use gac14:crate/* for the items contained in a crate). 
 
 ### Spawner Names ###
@@ -28,7 +24,7 @@ The crate items are chests with a custom name, lock, and loot table set accordin
 gac14:loot/categories/spawners/names/<domain>/<path>
 ```
 
-Given that `<domain>:<path>` forms a resource location that names an entity, the spawner loot category `gac14:loot/categories/spawners/names/<domain>/<path>` generates a spawner item that spawns an the entity named by `<domain>:<path>`. 
+Given that `<domain>:<path>` forms a resource location that names an entity and that entity is a living entity, the spawner loot category `gac14:loot/categories/spawners/names/<domain>/<path>` generates a spawner item that spawns an the entity named by `<domain>:<path>`. 
 If `<domain>:<path>` does not name an entity, then it may name a custom modification on an existing entity. Such additional entries are implementation-defined. 
 
 ### Spawner Groups ###
