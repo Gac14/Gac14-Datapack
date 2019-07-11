@@ -18,11 +18,11 @@ In additional to requirements, the wording of this specification can also indica
 Other types of language are not used to define parts of this specification, rather to provide examples, add a note to implementors, or convey an idea, but these have no specific bearing on the specification. 
 Additionally, informative language may be used in sections without defining a part of the specification, as above, when indicated (such as with Ex., note, or when the language is contained within parenthesis). Neither declarative nor imperative language will be used in this manner. 
 
+
 Imperative language defines a contract between the Gac14 Specification and the Gac14 Datapack. Depending on the specifics, it may be REQUIRED or RECOMMENED to be fufilled. In all cases where the explicit requirements SHOULD or SHOULD NOT are not used, the contract is REQUIRED to be fufilled, as though the explicit requirements MUST or MUST NOT are used. 
 
-Example: 
 
-Dec;aratove 
+Declarative language defines a construct of the Gac14 Specification and/or the Gac14 Datapack. These concepts may be REQUIRED, RECOMMENDED, or OPTIONAL to be provided depending on the specifics (almost never will they be REQUIRED when simply provided with declarative language, REQUIRED constructs are usually defined in conjunction with a contract). Constructs may have optional or   
 
 ## Undefined Behavior [term.ub]
 
