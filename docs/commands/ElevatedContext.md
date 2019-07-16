@@ -1,4 +1,4 @@
-# Command Context
+# Command Context [cmd.ctx]
 
 The Command Context refers to the set of permissions (among other things), which apply to a particular command being run. 
 

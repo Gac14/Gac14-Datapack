@@ -1,4 +1,4 @@
-# Ban Commands #
+# Ban Commands [cmd.ban]
 
 ```cpp
 /ban <player>

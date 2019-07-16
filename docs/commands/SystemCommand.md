@@ -1,13 +1,16 @@
-# System Command [cmd.sys] #
+# System Command [cmd.sys]
 
 The system command is an internal command that provides a bridge from the high-level function interface of the Gac14 Datapack to the low-level interfaces of Gac14 Mods. 
 
-## Disclaimer ##
+## Disclaimer 
+
+_This section is for informative purposes only, and does not define any concepts, constructs, or contracts within the specification._
+
 The command's documented here are intended soley for use within the Gac14 Datapack. 
 Many commands will make assumptions about the context they are run in, and the arguments they receive and will usually not validate these assumptions (as such, if an assumption fails the result is usually undefined behavior). 
 Additionally, these commands are subject to change without notice. As such, any person who uses the commands documented here does so AT THERE OWN RISK. No person who provided this documentation to you, or provided any mod that adds a subcommand, documented or not, to the system command, shall be held liable under any circumstances for any damage of any kind, direct or indirect, pertaining to your use and/or misuse of the system command. 
 
-## Syntax [cmd.sys.syntax] ##
+## Syntax [cmd.sys.syntax] 
 
 ```
 /system <subcommand>
@@ -17,9 +20,9 @@ Executes an internal command from an implementation defined set of subcommands. 
 
 Asside from one subcommand (`/system doPrivileged <function>`), the command must be run in an elevated context or the command fails. It is unspecified if this function will appear in the help command. 
 
-## Subcommands ##
+## Subcommands [cmd.sys.sub]
 
-### doPrivileged [cmd.sys.privileged] ##
+### doPrivileged [cmd.sys.sub.privileged] ##
 
 ```
 /system doPrivileged <function>
@@ -33,7 +36,7 @@ Runs `<function>` in an elevated context. This function can be executed by any u
 
 All functions that are run by gac14 as a user are run as though by `/system doPrivileged <function>` and that `<function>` is tagged with `#gac14:doPrivileged`. This does not actually cause `<function>` to become tagged, and if it is not already tagged as such, external attempts to run via `/system doPrivileged` will fail. This is simply an exposition statement that defines that `<function>` is run in an elevated context. 
 
-### stack [cmd.sys.stack] ###
+### stack [cmd.sys.sub.stack] ###
 
 Manipulates the function stack. 
 This command may only be run from within a function or the behavior is undefined. In addition, if a frame is pushed by a function, that frame must be popped before that function completes. 
@@ -57,7 +60,7 @@ Note that it does not need to be popped from within the function (it can be popp
 6. Sets the value of the nth value on the stack. 
 7. Executes a command that is sensitive to stack values.
 
-#### Types of Values on the Stack [cmd.sys.stack.types] ####
+#### Types of Values on the Stack [cmd.sys.sub.stack.types] ####
 
 Each value on the stack may be one of the following:
 
@@ -83,11 +86,11 @@ All values can be printed in chat, possibly with a tooltip that appears when it 
 * If the value is a string, it is printed as though interpreted literally as the text of a json text component with no style or extra
 * If the value is a number, it is printed as the value of the number. 
 
-##### Reference Values [cmd.sys.stack.types.ref] #####
+##### Reference Values [cmd.sys.sub.stack.types.ref] #####
 
 Reference values 
 
-#### stack push [cmd.sys.stack.push] ####
+#### stack push [cmd.sys.sub.stack.push] ####
 
 ```
 /system stack push blockref <pos> //(1)
@@ -106,7 +109,7 @@ Reference values
 /system stack push 
 ```
 
-#### stack get [cmd.sys.stack.get] ####
+#### stack get [cmd.sys.sub.stack.get] ####
 
 ```cpp
 /system stack get <n>
@@ -125,7 +128,7 @@ When `/system stack get <n>` is used on its own, it displays the value returned 
 The result of the command depends on 
 
 
-### player [cmd.sys.player] ###
+### player [cmd.sys.sub.player] ###
 
 ```
 /system player <player> limits <key> set|add|subtract <value> (1)
@@ -153,7 +156,7 @@ If the player is offline, this is equivalent to deleting the player.dat file and
 If this function is run as `<player>` the behavior is undefined. 
 
 
-### Additional Subcommands [cmd.sys.additional] ###
+### Additional Subcommands [cmd.sys.sub.additional] ###
 
 Mods may add additional, implementation-defined subcommands to the system command. 
 

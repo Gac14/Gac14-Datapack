@@ -1,4 +1,4 @@
-# Command Sequence Order #
+# Command Sequence Order [cmd.seq]
 
 In Minecraft Sequence Order of commands is unclear and primarily has no guarantees of any kind. 
 Some commands are inheritly racy with other aspects of minecraft. 
@@ -7,7 +7,7 @@ A race-condition leads to undefined behavior, which in this case usually means p
 
 In gac14, a future proposal is adopted to make everything nice and well defined, or at least explain when things can blow up in your face. (Undefined Behavior) 
 
-## Observeable Behavior ##
+## Observeable Behavior [cmd.seq.observe]
 
 Commands, as well as command chains have a set of behavior that is observeable. 
 
@@ -39,7 +39,7 @@ If a command run in a command chain would result in undefined behavior, then the
 
 The observeable behavior of a command does not have to reflect any command which does not have guaranteed sequence order with that command. 
 
-## Command Chain ##
+## Command Chain [cmd.seq.chain]
 This document defines a single entity, called a command chain, which describes a sequence of commands run either within a function, or through chain command blocks. 
 All commands run in a command chain have a guaranteed sequence order, defined as follows:
 
@@ -61,7 +61,7 @@ If a command is run from the client side (by a player, or through some player in
 
 All commands in a single command chain shall run in the same tick as the chain was started on the server. 
 
-### Command Blocks ###
+### Command Blocks [cmd.seq.chain.block]
 
 If a command block, except a chain command block, in the world would start being active during a tick, the command chain that results from it is run that tick. Otherwise a command chain is not started for that command block, except for repeating command blocks. 
 
@@ -74,7 +74,7 @@ If the observable behavior of the command run by a command block would cause it 
 
 
 
-## Synchronization ##
+## Synchronization [cmd.seq.synchronize]
 
 Certain actions synchronize-with certain other actions, if at least one action involved is caused as part of a command. (It is unspecified if this synchronization occurs in other circumstances). 
 

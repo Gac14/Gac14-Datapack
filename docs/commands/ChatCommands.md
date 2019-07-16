@@ -1,8 +1,8 @@
-# Chat Commands #
+# Chat Commands [cmd.chat]
 
 Gac14 Provides many ways to interact with various chat channels
 
-## Channels ##
+## Channels [cmd.chat.channels]
 
 The following Channels are provided by default in gac14
 
@@ -16,7 +16,7 @@ The following Channels are provided by default in gac14
 8. gac14:null -> Null Channel. By default, no one can speak in this channel and no one listens to it.
 9. gac14:book -> Channel for signs and books. By default, everyone can speak in this channel, but no one listens to it. This channel cannot be the target of the say ... in command, or the channel command. If a message is sent to it, that message is ignored, unless that message is stored in a written book or on a sign.  
 
-## Filters ##
+## Filters [cmd.chat.filters]
 
 The following filters can be applied to chat channels (and most are be default)
 
@@ -24,7 +24,7 @@ The following filters can be applied to chat channels (and most are be default)
 2. gac14:ipaddress -> Filters out INetv4 and INetv6 Addresses. 
 3. gac14:website -> Filters out websites. Only applies if it forms a valid URL with a valid TLD.
 
-## Commands ##
+## Commands [cmd.chat.list]
 
 ```
 /say <message> //(1)

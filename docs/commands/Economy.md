@@ -1,4 +1,4 @@
-# Gac14 Economy
+# Gac14 Economy [cmd.eco]
 
 ## Commands
 

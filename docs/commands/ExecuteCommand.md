@@ -1,4 +1,4 @@
-# Execute Command Modifications
+# Execute Command Modifications [cmd.exec]
 
 Gac14 expands upon the vanilla execute command, provided by Minecraft, in order to enable the manipulation of permissions provided by Gac14. 
 
@@ -6,7 +6,7 @@ None of Minecraft vanilla subcommands of the execute command are removed by thes
 
 /execute must be run with minecraft.generic.execute or the command fails. 
 
-## Additional Subcommands
+## Additional Subcommands [cmd.exec.addsub]
 
 ```
 /execute sudo -> /execute (1)

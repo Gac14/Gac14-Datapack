@@ -1,0 +1,1 @@
+combat @s set timer to 0s

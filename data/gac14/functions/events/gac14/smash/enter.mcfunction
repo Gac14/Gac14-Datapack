@@ -1,0 +1,1 @@
+combat @s set timer to 3600s
