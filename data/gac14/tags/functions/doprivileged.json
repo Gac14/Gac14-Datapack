@@ -1,5 +1,6 @@
 {
 	"values":[
-		"gac14:internal/g14dpinfo/g14dp_printinfo"
+		"gac14:internal/g14dpinfo/g14dp_printinfo",
+		"#gac14:shop"
 	]
 }
