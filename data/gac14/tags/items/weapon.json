@@ -1,6 +1,7 @@
 {
 	"values":[
 		"#gac14:projectile_weapon",
-		"#gac14:sword"
+		"#gac14:sword",
+		"#forge:weapons"
 	]
 }

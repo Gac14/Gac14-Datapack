@@ -1,9 +1,5 @@
 {
 	"values":[
-		"minecraft:leather_boots",
-		"minecraft:chain_boots",
-		"minecraft:iron_boots",
-		"minecraft:golden_boots",
-		"minecraft:diamond_boots"
+		"#forge:armor/boots"
 	]
 }

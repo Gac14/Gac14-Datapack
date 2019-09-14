@@ -1,6 +1,5 @@
 {
 	"values":[
-		"minecraft:bow",
-		"minecraft:crossbow"
+		"#forge:weapons/bows"
 	]
 }

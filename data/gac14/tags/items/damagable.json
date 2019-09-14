@@ -4,6 +4,6 @@
 		"#gac14:weapon",
 		"minecraft:shield",
 		"#gac14:tool",
-		"minecraft:elytra"
+		"#forge:elytra"
 	]
 }
