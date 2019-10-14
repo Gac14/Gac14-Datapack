@@ -4,5 +4,6 @@ The Root User, referred to in this specification as root, is a symbolic user wit
 
 ## Handling of Commands by Root [concepts.user.root.cmdhandle]
 
-All commands issued to the server by the root user SHALL be run in an elevated context. 
-These commands shall meet all permission level requirements `[cmd.permission.legacy]`, and all named permission requirements `[cmd.permission.req]`. 
+All commands issued to the server by the root user shall be run in an elevated context. 
+These commands shall meet all permission level requirements `[cmd.permission.legacy]`, 
+and all named permission requirements `[cmd.permission.req]`. 

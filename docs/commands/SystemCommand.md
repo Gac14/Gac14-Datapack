@@ -31,10 +31,15 @@ Asside from one subcommand (`/system doPrivileged <function>`), the command must
 Runs `<function>` in an elevated context. This function can be executed by any user. The execution of the comands in the function are guaranteed sequence order as though the command was `/function <function>`. 
 
 
-`<function>` must be tagged with `#gac14:doPrivileged` or the command must be run in an elevated context otherwise the command fails. Note that some functions are unsuitable for being run in this manner. If `<function>` is a function tag and not all functions selected by the tag are also tagged with `#gac14:doPrivileged`, it is unspecified if any functions are run, which functions are run, or the command simply fails. If any functions are run, only the functions which could be run individually with this command may be run, but it is not required that all functions are required to run as such. 
+`<function>` must be tagged with `#gac14:doPrivileged` or the command must be run in an elevated context otherwise the command fails. 
+Note that some functions are unsuitable for being run in this manner. 
+If `<function>` is a function tag and not all functions selected by the tag are also tagged with `#gac14:doPrivileged`, it is unspecified if any functions are run, which functions are run, or the command simply fails. 
+If any functions are run, only the functions which could be run individually with this command may be run, but it is not required that all functions are required to run as such. 
 
 
-All functions that are run by gac14 as a user are run as though by `/system doPrivileged <function>` and that `<function>` is tagged with `#gac14:doPrivileged`. This does not actually cause `<function>` to become tagged, and if it is not already tagged as such, external attempts to run via `/system doPrivileged` will fail. This is simply an exposition statement that defines that `<function>` is run in an elevated context. 
+All functions that are run by gac14 as a user are run as though by `/system doPrivileged <function>` and that `<function>` is tagged with `#gac14:doPrivileged`. 
+This does not actually cause `<function>` to become tagged, and if it is not already tagged as such, external attempts to run via `/system doPrivileged` will fail. 
+This is simply an exposition statement that defines that `<function>` is run in an elevated context. 
 
 ### stack [cmd.sys.sub.stack] ###
 
