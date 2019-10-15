@@ -28,7 +28,9 @@ Asside from one subcommand (`/system doPrivileged <function>`), the command must
 /system doPrivileged <function>
 ```
 
-Runs `<function>` in an elevated context. This function can be executed by any user. The execution of the comands in the function are guaranteed sequence order as though the command was `/function <function>`. 
+Runs `<function>` in an elevated context. 
+This function can be executed by any user. 
+The execution of the commands in the function are guaranteed sequence order as though the command was `/function <function>`. 
 
 
 `<function>` must be tagged with `#gac14:doPrivileged` or the command must be run in an elevated context otherwise the command fails. 
@@ -54,7 +56,7 @@ Note that it does not need to be popped from within the function (it can be popp
 /system stack pop frame //(4)
 /system stack get <n> //(5)
 /system stack set <n> -> /system stack push //(6)
-/system stack ... //(7)
+/system stack run ... //(7)
 ```
 
 1. pushes a value onto the stack. See below for valid subcommands
@@ -63,7 +65,9 @@ Note that it does not need to be popped from within the function (it can be popp
 4. Pops a frame from the stack that was pushed with /system stack push frame
 5. Gets the nth value in the stack frame. Negative values refer to values from a previous frame. 
 6. Sets the value of the nth value on the stack. 
-7. Executes a command that is sensitive to stack values.
+7. Executes a command that is sensitive to stack values. Which Commands are supported, and there respective syntax is Implementation-Defined
+
+
 
 #### Types of Values on the Stack [cmd.sys.sub.stack.types] ####
 
@@ -111,7 +115,7 @@ Reference values
 /system stack push item <item> //(11)
 /system stack push item get <n> //(12)
 /system stack push text <text> //(13)
-/system stack push 
+/system stack push text get <n> //(14)
 ```
 
 #### stack get [cmd.sys.sub.stack.get] ####
@@ -126,7 +130,8 @@ If n is negative, returns the nth last value pushed onto the stack in the previo
 
 If for some reason, the value on the stack cannot be accessed, then the behavior is undefined (ie., there is less than n values pushed onto the stack in the current frame, or there is not a previous frame for negative accessing). 
 
-In any given subcommand of `/system stack`, if `get <n>` is a valid argument, it shall act as defined above, and use the value received as specified in the subcommand. 
+In any given subcommand of `/system stack`, if `get <n>` is a valid argument, it shall act as defined above, 
+and use the value received as specified in the subcommand. If `get <n>` is a valid argument of the base command 
 
 When `/system stack get <n>` is used on its own, it displays the value returned as its result message. 
 
@@ -143,7 +148,8 @@ The result of the command depends on
 
 (1): Sets a limit for a player, or enables/disables certain actions take by a player.
 
-The keys that are defined are unspecified. If a key that does not exist is referenced or is referenced improperly (an action key used in the limits subcommand or vice versa), the behavior is undefined. 
+The keys that exist and there types are Implementation-defined. 
+If a key that does not exist is referenced or is referenced improperly (an action key used in the limits subcommand or vice versa), the behavior is undefined. 
 
 Each limit key has an unspecified initial value, and may have an unspecified maximum and minimum. 
 If a limit key would be set to a value above its maximum (if such exists), the key is set to the maximum value instead. 
@@ -155,10 +161,11 @@ If an action affected by this command is concurrently taken by `<player>`, the b
 Use of the `enable` verb of the actions subcommand synchronizes with any use of the `disable` verb for the same key on `player` and vice versa. Additionally, use of the actions subcommand for a given `<key>` synchronizes with the player action associated with `<key>` taken by `<player>` (this results in indeterminate sequence order even if the associated effects are unsequenced, with an unspecified sequencing guarantee, this allows for you to modify with limits command without fear of invoking undefined behavior). 
 
 
-(2): Clears a player's inventory, ender-chest, player vaults (if they exist), removes the player from all groups, removes all permissions, deletes the associated spawn point etc., and executes any other unspecified actions. The player is then killed if online ignoring all death triggers and player loot tables.
+(2): Clears a player's inventory, ender-chest, player vaults (if they exist), removes the player from all groups, deletes the associated spawn point etc., and executes any other unspecified actions. 
+The player is then killed if online ignoring all death triggers and player loot tables.
 If the player is offline, this is equivalent to deleting the player.dat file and associated player information folder. 
 
-If this function is run as `<player>` the behavior is undefined. 
+Running this command as `<player>` is conditionally supported. If unsupported, the behavior is undefined. 
 
 
 ### Additional Subcommands [cmd.sys.sub.additional] ###

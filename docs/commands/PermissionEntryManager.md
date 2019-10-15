@@ -5,15 +5,18 @@ The Permission Entry Manager is a command which can be used to manipulate the Ga
 ## Command Syntax [cmd.pem.syntax]
 
 ```
-/pem players <player>
-/pem groups <name> 
+/pem <object>
 ```
 
-### Player Permission Manipulation
+### Permission Manipulation
 
 ```
-/pem players <player> join <group> (1)
-/pem players <player> leave <group> (2)
-/pem players <player> group +|-|^<permissions...> (3)
+/pem <object> join <group> (1)
+/pem <object> leave <group> (2)
 ```
+
+1. Causes *object* to join *group*. After this command *object* will have membership in *group*. 
+2. Causes *object* to leave *group*. After this command *object* will not have membership in *group*, unless implied by a different group *object* has membership in. 
+
+
 

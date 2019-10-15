@@ -30,12 +30,14 @@ The following actions consitute the Observeable behavior of a command:
 15. Modifying the players information table
 16. Outputting a message in any channel, except gac14:book or any channel with no online members. 
 
-The observeable behavior of a command chain is the net observeable behavior of each command in the chain. Note that only the observeable behavior of a command chain is required to be preserved. A command that would not affect the observeable behavior of a command need not be run or may be substituted with annother command with the same observeable behavior. 
+The observeable behavior of a command chain is the net observeable behavior of each command in the chain. 
+Note that only the observeable behavior of a command chain is required to be preserved. 
+A command that would not affect the observeable behavior of a command need not be run or may be substituted with annother command with the same observeable behavior. 
 
 For example, if a command chain summons a zombie, then subsequently kills that zombie, the zombie does not ever need to be summoned, instead simply its loot table (minecraft:entities/zombie) may be dropped on the ground. 
 If the loot would not be dropped or would subsequently be killed, it may never even drop the loot. 
 
-If a command run in a command chain would result in undefined behavior, then the observeable behavior of the entire chain does not need to be preserved. 
+If a command run in a command chain has undefined behavior, then the observeable behavior of the entire chain does not need to be preserved. 
 
 The observeable behavior of a command does not have to reflect any command which does not have guaranteed sequence order with that command. 
 
