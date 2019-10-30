@@ -10,7 +10,7 @@
 					"functions":[
 						{
 							"function":"set_name",
-							"name":"\u00a7klp\u00a7r\u00a75Legendary Crate Key\u00a7r\u00a7klp\u00a7r\u200b"
+							"name": [{"text":"lp","obfuscated": true},{"text":"Legendary Crate Key","color": "magenta"},{"text":"lp","obfuscated": true},"\u200b"]
 						}
 					]
 				}

@@ -56,7 +56,8 @@ The Object Domain of users is called the User Domain. The Gac14 Specification De
 Implementations may add additional implementation-defined User Domains. 
 
 User Domains are named by their Unqualified Name. The Qualified Domain Name is the User Domains assigned ID, 
-prefixed by the qualifier UserDomain, followed by `@`, similar to groups. 
+prefixed by the qualifier UserDomain, followed by `@`, similar to groups
+ (so the Qualified Domain Name of the Minecraft User Domain is `UserDomain@00000000-0000-0000-0000-000000000000`). 
 
 The Standard User Domains are:
 * The Minecraft User Domain (id `00000000-0000-0000-0000-000000000000`)
@@ -73,18 +74,25 @@ The qualified name of any user is any one of the following:
 * The User's UUID, prefixed by the qualified or Unqualified name of the User Domain, followed by `//`.
 * The Unqualified Name of the user, prefixed by the qualified or Unqualified name of the User Domain, followed by `//`.
 
+When the server is in offline mode, objects in the Minecraft User Domain cannot be accessed. 
+
 ### User Lookup [concepts.users.obj.user.lookup]
 
 Whenever a user is referenced by its unqualified name, it is looked up in a standard search order, 
 to resolve the qualified name. In order, the unqualified name is checked against each User Domain, 
 that participates in this search order. If the check is successful, then that qualified name is used. 
 
-The Standard Search Order for User Lookup is:
-* Users in the Minecraft Domain. The check passes if the server is in Online Mode, and a check against Mojang's Official Minecraft Account Servers finds exactly one Minecraft Account with the name of that user.
-* Users in the Offline Domain. The check passes if at least one user with the name which has previously logged on to the server, while the server is in offline mode
-* Users in the FakeUsers Domain. The check passes if a user with that name has been created by some command that instructs the server to create a Fake User, and has not be removed by a command which instructs the server to remove that Fake User.
-* Users in unspecified additional domains, searched in an unspecified order. Whether the check passes for any given domain is implementation-defined.
-* Users in the Internal Domain. It is implementation-defined if the check passes, except that this check always passes for the user with the unqualified name `root`.
+The Standard Search Order for User Lookup is (in order from first searched to last searched):
+1. Users in the Minecraft Domain. The check passes if the server is in Online Mode, and a check against Mojang's Official Minecraft Account Servers finds exactly one Minecraft Account with the name of that user.
+2. Users in the Offline Domain. The check passes if at least one user with the name which has previously logged on to the server, while the server is in offline mode
+3. Users in the FakeUsers Domain. The check passes if a user with that name has been created by some command that instructs the server to create a Fake User, and has not be removed by a command which instructs the server to remove that Fake User.
+4. Users in unspecified additional domains, searched in an unspecified order. Whether the check passes for any given domain is implementation-defined.
+5. Users in the Internal Domain. It is implementation-defined if the check passes, except that this check always passes for the user with the unqualified name `root`.
+
+When performing a Search for User Lookup against an Unqualified Name in Online Mode, 
+ if a user with that name has previously logged on to the server, and since the last time that user has logged on to the server
+ that user has changed their user name, the behavior is undefined. 
+This does not apply when the Qualified Object Name is used. 
 
 
 ## Command Context [concepts.users.obj.context]

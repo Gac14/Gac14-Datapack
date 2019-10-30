@@ -27,9 +27,19 @@ Combat Timers are MAY be processed either according to server time or real time.
 
 ## Disabling Combat Timer [concepts.combat.timer.disable]
 
-In some situations, a player may have combat disabled. When a player has combat disabled, that player immediately leaves combat if they are in combat. While combat is disabled for a player, that player cannot enter combat (even if the combat timer is set by a command).
+In some situations, a player may have combat disabled. 
+When a player has combat disabled, that player immediately leaves combat if they are in combat. 
+While combat is disabled for a player, that player cannot enter combat (even if the combat timer is set by a command).
 
-A player which enters spectator or creative mode has combat disabled until they re-enter adventure or survival gamemode. Additionally, in other implementation defined situations, players can have combat disabled. This can prevent it from being enabled when changing from creative or spectator gamemode to adventure gamemode.
+A player which enters spectator or creative mode has combat disabled until they re-enter adventure or survival gamemode. 
+Additionally, in other implementation defined situations, players can have combat disabled. 
+This can prevent it from being enabled when changing from creative or spectator gamemode to adventure gamemode.
 
-(Implementation Note: implementations are permitted to pose limitations on the gamemodes a player is allowed to be in during gameplay. As this might not stop a player from entering an illegal gamemode, but returns them to a legal mode, it is permissible that up to one 1 game tick elapses between a player entering spectator or creative mode before 
+(Implementation Note: implementations are permitted to pose limitations on the gamemodes a player is allowed to be in during gameplay. 
+As this might not stop a player from entering an illegal gamemode, but returns them to a legal mode, 
+it is permissible that up to one 1 game tick elapses between a player entering spectator or creative mode before returning them to a legal gamemode. 
+
+As a result, implementations are permitted to keep players in combat for 1 game tick after disabling combat) 
+
+
 

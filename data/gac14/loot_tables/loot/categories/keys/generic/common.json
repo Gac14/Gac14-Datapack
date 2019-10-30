@@ -10,7 +10,7 @@
 					"functions":[
 						{
 							"function":"set_name",
-							"name":"\u00a7klz\u00a7r\u00a77Common Crate Key\u00a7r\u00a7klz\u00a7r\u200b"
+							"name":[{"text": "lz","obfuscated":true},{"text":"Common Crate Key","color": "gray"},{"text": "lz","obfuscated":true},"\u200b"]
 						}
 					]
 				}

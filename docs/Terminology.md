@@ -8,7 +8,8 @@ The Gac14 Specification, the specification, this specification, or Gac14 Specifi
 
 ## Customization Point [term.custom]
 
-A Customization Point is a part of the specification which can be changed by consumers of this specification. These customization points are intended to provide some sort of control over high level constructs defined by this specification. 
+A Customization Point is a part of the specification which can be changed by consumers of this specification. 
+These customization points are intended to provide some sort of control over high level constructs defined by this specification. 
 Most customization points are set by a datapack or the Gac14 Datapack, though some may not be.
 
 ## Configuration Point [term.config]
@@ -32,7 +33,9 @@ Other types of language are not used to define parts of this specification, rath
 Additionally, informative language may be used in sections without defining a part of the specification, as above, when indicated (such as with Ex., note, or when the language is contained within parenthesis). Neither declarative nor imperative language will be used in this manner. 
 
 
-Imperative language defines a contract between the Gac14 Specification and the Gac14 Datapack. Depending on the specifics, it may be REQUIRED or RECOMMENED to be fufilled. In all cases where the explicit requirements SHOULD or SHOULD NOT are not used, the contract is REQUIRED to be fufilled, as though the explicit requirements MUST or MUST NOT are used. 
+Imperative language defines a contract between the Gac14 Specification and the Gac14 Datapack. 
+Depending on the specifics, it may be REQUIRED or RECOMMENED to be fufilled. 
+In all cases where the explicit requirements SHOULD or SHOULD NOT are not used, the contract is REQUIRED to be fufilled, as though the explicit requirements MUST or MUST NOT are used. 
 
 
 Declarative language defines a construct of the Gac14 Specification and/or the Gac14 Datapack. These constructs may be REQUIRED, RECOMMENDED, or OPTIONAL to be provided depending on the specifics (almost never will they be REQUIRED when simply provided with declarative language, REQUIRED constructs are usually defined in conjunction with a contract of semantics). 
@@ -91,3 +94,18 @@ PvE, Player v Environment, Player vs Environment, or Player versus Environment, 
 A Command is a core gameplay concept which is initiated by one or more members of the server, or by the server, 
 and results in some well-defined action to occur on the server. 
 
+## Game Tick [term.tick]
+
+A Game Tick is a core gameplay concept which is usually the smallest unit of time events on the server can be separated by. 
+There is usually 20 Game Ticks per Real Time second on the server side, though this specification permits fewer to occur. 
+
+## Real Time [term.time.real]
+
+Real Time is system time. 
+A period expressed in real time is independant of the actual length of a Game Tick. 
+
+## Game Time [term.time.game]
+
+Game Time is the time in game.
+A period expressed in Game Time is depedant on the actual length of a Game Tick. 
+There are exactly 20 Game Ticks per Game Time second. 
