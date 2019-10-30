@@ -10,7 +10,7 @@ Commands are constructs provided by the Gac14 Specification which allow for the 
 * [[cmd.ctx]](https://chorman0773.github.io/Gac14-Datapack/commands/EleveatedContext.md)
 * [[cmd.exec]](https://chorman0773.github.io/Gac14-Datapack/commands/ExecuteCommand)
 * [[cmd.seq]](https://chorman0773.github.io/Gac14-Datapack/commands/SequenceOrderGuarantee)
-* [[cmd.sys]](https://chorman0773.github.io/Gac14-Datapack/commands/System)
+* [[cmd.sys]](https://chorman0773.github.io/Gac14-Datapack/commands/SystemCommand)
 
 ## Failure to Execute [cmd.fail]
 
