@@ -48,7 +48,8 @@ Informative language defines a concept of the specification. These concepts can 
 Undefined Behavior occurs when various terms of this specification are broken. This may apply to both the datapack and the specification. 
 Such occurences will be described with "The behavior of ... is undefined" or "The behavior is undefined", or "undefined behavior". 
 
-If undefined behavior occurs in the datapack, then the semantic structure of the datapack is no longer required to be observed, either by the datapack or the implementation. At the point which undefined behavior occurs, all concepts cease to have any defined meaning and are no longer bound by any rules, explicit or implicit, provided by this specification. 
+If undefined behavior occurs in the datapack, then the semantic structure of the datapack is no longer required to be observed, either by the datapack or the implementation.
+ At the point which undefined behavior occurs, all concepts cease to have any defined meaning and are no longer bound by any rules, explicit or implicit, provided by this specification. 
 
 If undefined behavior occurs in the specification, then the defined behavior of the implementation is no longer required to be fufilled. 
 At the point which undefined behavior occurs, all contracts cease to have any requirements, and all concepts cease to be required to be observed. 
@@ -57,7 +58,8 @@ At such a point, the implementation ceases to be bound any any rules, structural
 In particular, datapacks and implementations are allowed to make assumptions about constructs and contracts, based on what does not result in undefined behavior. 
 (The results of causing undefined behavior may therefore be as intended, and may have functional semantics. On the other hand, the results may be destructive, non-functional, or semantically broken) 
 
-Additionally, datapacks and implementations are within there right to give meaning to undefined behavior, either causing an error, or giving a semantically correct result. However this cannot be relied upon in any case. 
+Additionally, datapacks and implementations are within there right to give meaning to undefined behavior, either causing an error, or giving a semantically correct result. 
+However this cannot be relied upon in any case. 
 Conditionally-supported will be used over undefined behavior in contexts where it is intended that implementations or datapacks may give meaning to otherwise undefined behavior. 
 
 ## Unspecified Behavior [term.unspecified]
@@ -68,6 +70,8 @@ The implementation or datapack MUST choose between these choices of semantic beh
 ## Implemenation-Defined Behavior [term.impldef]
 
 Implementation-Defined Behavior is Unspecified Behavior where the implementation or datapack is REQUIRED to document how the choice is made.
+
+Implementations may provide the choice as a Configuration Point, however this is OPTIONAL. 
 
 ## Conditionally-supported Behavior [term.conditional]
 

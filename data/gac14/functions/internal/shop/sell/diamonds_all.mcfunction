@@ -1,0 +1,1 @@
+eco txn start add minecraft:diamond * from @s balance with gac14:currency from internal//root

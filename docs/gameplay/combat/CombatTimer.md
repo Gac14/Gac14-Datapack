@@ -13,17 +13,19 @@ A player with a combat timer that has a non-zero length
 ## Putting a Player In Combat [concepts.combat.timer.enter]
 
 A Player is Put into combat when the player is not in combat, and one of the following events occurs:
-* The player is dealt damage
+* The player is dealt damage, from another player, or an entity of an implementation-defined set of types, which MUST include all types tagged #gac14:combat_entities
 * The player deals damage to another player.
 * A Game Event forces the player to enter combat
 * A command explicit sets the combat time for a player, which was not previously in combat, to a non-zero number of ticks.
 
 When a player is put into combat, their combat timer is set to an implementation-defined number of ticks, unless explicitly set by a command. If one of these events occurs while the player is in combat, it is implementation-defined whether the timer is modified, except that commands that modify combat time MUST be observed. (It is intended that when such an event occurs, the timer is prolonged by some value). 
-Implementations SHOULD inform players when they enter combat. (It is expected that the message sent to players, and the length of the timer are both provided as configuration points). 
+Implementations SHOULD inform players when they enter combat. 
+ (It is expected that the message sent to players, and the length of the timer are both provided as configuration points). 
 
 A player leaves combat after their combat timer has expired, or when a command explicitly sets the combat time for that player to zero ticks. 
 
-Combat Timers are MAY be processed either according to server time or real time. It is implementation-defined which one applies. 
+Combat Timers are MAY be processed either according to server time or real time. 
+It is implementation-defined which one applies. 
 
 ## Disabling Combat Timer [concepts.combat.timer.disable]
 

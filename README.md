@@ -7,7 +7,8 @@ This datapack is designed to implement many of the features of Gac14 in a struct
 This Datapack is designed for use with the Gac14 Modification Set as created by Connor Horman. 
 It will only function correctly on a minecraft version modified with those mods or with annother single mod or collection of mods which successfully implement the Gac14 Server, defined by the `/docs` directory.
 
-This Repository has "plug-and-play" functionality. It can be downloaded or cloned to any Minecraft Datapack Directory which is run with a version of minecraft modified as above. 
+This Repository has "plug-and-play" functionality. 
+It can be downloaded or cloned to any Minecraft Datapack Directory which is run with a version of minecraft modified as above. 
 
 If Cloned, commits to the cloned branch will automatically update the local copy. 
 

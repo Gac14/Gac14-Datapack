@@ -1,0 +1,2 @@
+execute store success score @s Info run eco txn start headless add minecraft:diamond 1 from @s balance with gac14:currency from internal//root complete
+execute unless score @s Info 0 == 1 run tellraw @s {"text":"You can't afford this","color":"red"}

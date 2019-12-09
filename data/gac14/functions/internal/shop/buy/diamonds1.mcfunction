@@ -1,4 +1,2 @@
-eco txn start headless internal//root
-eco txn request from internal//root minecraft:diamond 1
-eco txn balance with gac14:currency from @s
-eco txn complete or "You do not have enough money to 
+execute store success score @s Info run eco txn start headless add minecraft:diamond 1 from internal//root balance with gac14:currency from @s complete
+execute unless score @s Info 0 == 1 run tellraw @s {"text":"You can't afford this","color":"red"}

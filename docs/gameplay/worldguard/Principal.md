@@ -1,7 +1,7 @@
 # Worldguard Principal [concepts.worldguard.principal]
 
-A Worldguard Principal is some entity which can be resolved to a set of players. 
-A Principal is said to match a player if that player is a member of the principal's associated set. 
+A Worldguard Principal is some entity which can be resolved to a set of objects. 
+A Principal is said to match an object if that object is a member of the principal's associated set. 
 
 ## Principal Provider [concepts.worldguard.principal.provider]
 
