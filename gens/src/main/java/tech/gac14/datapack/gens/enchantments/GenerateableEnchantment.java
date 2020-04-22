@@ -9,7 +9,9 @@ import java.util.List;
 import java.util.Set;
 
 public class GenerateableEnchantment extends Enchantment {
+    public static class Builder{
 
+    }
     private GenerateableEnchantment(Rarity rarityIn, EnchantmentType typeIn, EquipmentSlotType[] slots) {
         super(rarityIn, typeIn, slots);
     }
